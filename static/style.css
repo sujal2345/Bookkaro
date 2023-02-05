@@ -1,0 +1,18 @@
+.navbar{
+    background-color: rgb(98, 231, 231);
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.login-form,.details,.container{
+    color: black;
+}
+.heading{
+    display: contents;
+    color: black;
+}
+.type{
+    color: white;
+    border-color: aliceblue;
+}

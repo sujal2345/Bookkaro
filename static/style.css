@@ -8,11 +8,27 @@ body{
 .login-form,.details,.container{
     color: black;
 }
-.heading{
+.container{
+    color: rgb(255, 255, 255);
+}
+.Left{
+    color: rgb(255, 0, 0);
+    display:inline;
+    font-size: 30px;
+}
+
+.right{
     display: contents;
-    color: black;
+    font-size: 30px;
+
 }
 .type{
     color: white;
     border-color: aliceblue;
+}
+h5{
+    color: black;
+}
+button.navbar-toggler{
+    border-color:black ;
 }

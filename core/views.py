@@ -30,20 +30,43 @@ def search_results(request):
 class PostDetailview(DetailView):
     model=Post
     template_name='detailview.html'
+    def get_context_data(self, *args, **kwargs):
+        Type_menu=Type.objects.all()
+        context = super(PostDetailview,self).get_context_data(*args, **kwargs)
+        context["Type_menu"]=Type_menu
+        return context
 class PostDeleteView(DeleteView):
     model=Post
     template_name='delete.html'
     success_url=reverse_lazy('index')
+    def get_context_data(self, *args, **kwargs):
+        Type_menu=Type.objects.all()
+        context = super(PostDeleteView,self).get_context_data(*args, **kwargs)
+        context["Type_menu"]=Type_menu
+        return context
 class PostCreateView(CreateView):
     model=Post
     form_class=PostForm
     template_name='addpost.html'
+    def get_context_data(self, *args, **kwargs):
+        Type_menu=Type.objects.all()
+        context = super(PostCreateView,self).get_context_data(*args, **kwargs)
+        context["Type_menu"]=Type_menu
+        return context
 class PostUpdateView(UpdateView):
     model=Post
     template_name='editpost.html' 
     fields=['address','facilities','main_image','secondary_image','third_image','type','subtype']
+    def get_context_data(self, *args, **kwargs):
+        Type_menu=Type.objects.all()
+        context = super(PostUpdateView,self).get_context_data(*args, **kwargs)
+        context["Type_menu"]=Type_menu
+        return context
 
 def Buy(request):
     return render(request, 'category.html')
 def Rent(request):
     return render(request, 'subcategory.html')
+def contactus(request):
+    return render(request, 'contact.html')
+    

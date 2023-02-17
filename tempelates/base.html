@@ -62,7 +62,7 @@
         
         <form class="d-flex " method="POST"action="{%url 'search-results' %}"role="search">
           {% csrf_token %}
-          <input class="form-control me-2" type="search" name="searched" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" type="search" name="searched" placeholder="Ex. Watoda, Civil lines" aria-label="Search">
           <button class="btn btn-outline-white text-white bg-info" type="submit">Search</button>
         </form>
         </div>
